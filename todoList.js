@@ -1,3 +1,6 @@
+import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
+
+
 let todoList = JSON.parse(localStorage.getItem("todoList")); /* || [
   {
     name: "Learn Javascript",
