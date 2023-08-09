@@ -1,7 +1,5 @@
-import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
-
-
-let todoList = JSON.parse(localStorage.getItem("todoList")); /* || [
+let todoList = [];
+  /* JSON.parse(localStorage.getItem("todoList")); */ /* || [
   {
     name: "Learn Javascript",
     dueDate: "02.08.2023",
@@ -15,9 +13,9 @@ let todoList = JSON.parse(localStorage.getItem("todoList")); /* || [
 renderTodoList();
 
 //saving to local storage
-function saveToLocalStorage() {
+/* function saveToLocalStorage() {
   localStorage.setItem("todoList", JSON.stringify(todoList));
-}
+} */
 
 //add button
 const addButton = document.querySelector(".js-add-button");
@@ -87,7 +85,7 @@ function renderTodoList() {
     todoHTML += html;
   });
   document.querySelector(".js-list-container").innerHTML = todoHTML;
-  saveToLocalStorage();
+ /*  saveToLocalStorage(); */
 
   //delete button
   const deleteButton = document.querySelectorAll(".js-delete-button");
@@ -95,7 +93,7 @@ function renderTodoList() {
     button.addEventListener("click", () => {
       todoList.splice(index, 1);
       todoList = todoList;
-      saveToLocalStorage();
+     /*  saveToLocalStorage(); */
       renderTodoList();
     });
   });
@@ -148,7 +146,7 @@ function renderTodoList() {
 
         todoList[index].name = texts[index].innerHTML;
         todoList[index].dueDate = dueDates[index].innerHTML;
-        saveToLocalStorage();
+       /*  saveToLocalStorage(); */
       }
     });
   });
